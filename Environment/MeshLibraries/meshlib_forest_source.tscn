@@ -1,0 +1,498 @@
+[gd_scene load_steps=77 format=3 uid="uid://durlaoc8icbyb"]
+
+[ext_resource type="ArrayMesh" uid="uid://cpom12g7kil7h" path="res://Assets/Models/tile-bump.obj" id="1_qcqsc"]
+[ext_resource type="ArrayMesh" uid="uid://bui6uymlritwn" path="res://Assets/Models/tile-corner-inner.obj" id="2_mw22e"]
+[ext_resource type="ArrayMesh" uid="uid://d4kg1fs85ci8f" path="res://Assets/Models/tile-corner-large.obj" id="3_cm0gy"]
+[ext_resource type="ArrayMesh" uid="uid://ba42b4sk6egdf" path="res://Assets/Models/tile-corner-outer.obj" id="4_rogne"]
+[ext_resource type="ArrayMesh" uid="uid://cw8bjqxcmtit2" path="res://Assets/Models/tile-corner-round.obj" id="5_0f6yl"]
+[ext_resource type="ArrayMesh" uid="uid://yfoer1wgvgk5" path="res://Assets/Models/tile-corner-square.obj" id="6_h5pxt"]
+[ext_resource type="ArrayMesh" uid="uid://dy8f0gubqld1c" path="res://Assets/Models/tile-crossing.obj" id="7_pa6s6"]
+[ext_resource type="ArrayMesh" uid="uid://bsi8yq1lkl8pa" path="res://Assets/Models/tile-crystal.obj" id="8_jnrwx"]
+[ext_resource type="ArrayMesh" uid="uid://cvudnk0cwtxkd" path="res://Assets/Models/tile-dirt.obj" id="9_030tn"]
+[ext_resource type="ArrayMesh" uid="uid://ci6k7mtr6hs0e" path="res://Assets/Models/tile-end-round.obj" id="10_ktn3f"]
+[ext_resource type="ArrayMesh" uid="uid://dowyav6ajkck1" path="res://Assets/Models/tile-end.obj" id="11_4pqxs"]
+[ext_resource type="ArrayMesh" uid="uid://djjxsod45g3us" path="res://Assets/Models/tile-hill.obj" id="12_8mn1g"]
+[ext_resource type="ArrayMesh" uid="uid://d063wswj5pgf6" path="res://Assets/Models/tile-river-bridge.obj" id="13_5qys6"]
+[ext_resource type="ArrayMesh" uid="uid://ul5owd1167c4" path="res://Assets/Models/tile-river-corner.obj" id="14_0il4d"]
+[ext_resource type="ArrayMesh" uid="uid://da8bmokkueuda" path="res://Assets/Models/tile-river-slope-large.obj" id="15_5ng50"]
+[ext_resource type="ArrayMesh" uid="uid://dy2le3gifavc2" path="res://Assets/Models/tile-river-slope.obj" id="16_3bint"]
+[ext_resource type="ArrayMesh" uid="uid://dk864nutlcvef" path="res://Assets/Models/tile-river-straight.obj" id="17_kxhn8"]
+[ext_resource type="ArrayMesh" uid="uid://bpg2abnjq8w2l" path="res://Assets/Models/tile-river-transition.obj" id="18_qy2ab"]
+[ext_resource type="ArrayMesh" uid="uid://caf8hjwh2kgoo" path="res://Assets/Models/tile-river-waterfall.obj" id="19_nrh0i"]
+[ext_resource type="ArrayMesh" uid="uid://bsuhel8kppv1s" path="res://Assets/Models/tile-rock.obj" id="20_yjeul"]
+[ext_resource type="ArrayMesh" uid="uid://bg4fkfxnu18nc" path="res://Assets/Models/tile-slope.obj" id="21_vjueb"]
+[ext_resource type="ArrayMesh" uid="uid://chlkswithtem7" path="res://Assets/Models/tile-spawn-end-round.obj" id="22_yiq3u"]
+[ext_resource type="ArrayMesh" uid="uid://brxmi8dxu7jtl" path="res://Assets/Models/tile-spawn-end.obj" id="23_ysg74"]
+[ext_resource type="ArrayMesh" uid="uid://bmlhoxai3bniw" path="res://Assets/Models/tile-spawn-round.obj" id="24_nmi3f"]
+[ext_resource type="ArrayMesh" uid="uid://be71v5v4rmfbj" path="res://Assets/Models/tile-spawn.obj" id="25_cw8xv"]
+[ext_resource type="ArrayMesh" uid="uid://cwb2vluid336s" path="res://Assets/Models/tile-split.obj" id="26_pfdrv"]
+[ext_resource type="ArrayMesh" uid="uid://dsxp6hhkfkjmx" path="res://Assets/Models/tile-straight-slope-large.obj" id="27_vkenb"]
+[ext_resource type="ArrayMesh" uid="uid://8c8gj2l0hbgw" path="res://Assets/Models/tile-straight-slope.obj" id="28_tye6f"]
+[ext_resource type="ArrayMesh" uid="uid://di12kiufnexw7" path="res://Assets/Models/tile-straight.obj" id="29_in8q0"]
+[ext_resource type="ArrayMesh" uid="uid://gdoda3kpan8e" path="res://Assets/Models/tile-transition.obj" id="30_swbog"]
+[ext_resource type="ArrayMesh" uid="uid://dgn2gtdbrcwjj" path="res://Assets/Models/tile-tree-double.obj" id="31_lav02"]
+[ext_resource type="ArrayMesh" uid="uid://bmsfg22k17c0x" path="res://Assets/Models/tile-tree-quad.obj" id="32_i056u"]
+[ext_resource type="ArrayMesh" uid="uid://cxojhdo2c1ej3" path="res://Assets/Models/tile-tree.obj" id="33_2trjp"]
+[ext_resource type="ArrayMesh" uid="uid://bd3k0hre2v1pg" path="res://Assets/Models/tile-wide-corner.obj" id="34_ni16u"]
+[ext_resource type="ArrayMesh" uid="uid://d1ph3ffewn7t8" path="res://Assets/Models/tile-wide-split.obj" id="35_gdygn"]
+[ext_resource type="ArrayMesh" uid="uid://bswk4fbi3vedd" path="res://Assets/Models/tile-wide-straight.obj" id="36_qxdl1"]
+[ext_resource type="ArrayMesh" uid="uid://bi3bv8jl6p0ar" path="res://Assets/Models/tile-wide-transition.obj" id="37_hra5o"]
+[ext_resource type="ArrayMesh" uid="uid://cmfu1bqosrjog" path="res://Assets/Models/tile.obj" id="38_5mhvb"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qcqsc"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.19998, -0.5, 0.5, 0, -0.5, -0.5, 0.19998, 0.5, 0.5, 0, 0.5, -0.5, 0.242531, -0.391738, 0.5, 0.19998, -0.5, -0.5, 0.242531, 0.391641, 0.5, 0.19998, 0.5, -0.5, 0.27407, -0.269283, 0.5, 0.242531, -0.391738, -0.5, 0.27407, 0.269186, 0.5, 0.242531, 0.391641, -0.5, 0.293451, -0.137138, 0.5, 0.27407, -0.269283, -0.5, 0.293451, 0.13704, 0.5, 0.27407, 0.269186, -0.5, 0.3, 0, 0.5, 0.293451, -0.137138, 0.5, 0.293451, 0.13704, 0.5, 0.3, 0)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mw22e"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0.4, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.2, 0.5, 0.5, 0.4, 0.5, 0.5, 0.4, -0.5, 0.5, 0, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cm0gy"]
+points = PackedVector3Array(-1, 0, -1, -1, 0, 1, -1, 0.199969, -1, 1, 0, -1, -1, 0.199969, 1, 1, 0, 1, -0.54307, 0.96, -0.658771, -0.52036, 0.635991, -0.836139, 1, 0.199969, -1, -0.54307, 0.96, -0.613547, 1, 0.199969, 1, 0.66112, 0.429914, 0.980227, 0.66112, 0.635991, 0.930305, 0.638606, 0.96, 0.752937, -0.497847, 0.96, -0.658771, 0.683829, 0.96, 0.707713, 0.861198, 0.635991, 0.730227, 0.683829, 0.96, 0.752937, 0.802662, 0.635991, 0.87177)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rogne"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0.2, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.2, 0.5, 0.5, 0.4, -0.5, 0.5, 0, 0.5, 0.5, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0f6yl"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.199991, -0.5, 0.5, 0, -0.5, -0.5, 0.199991, 0.5, 0.5, 0, 0.5, -0.406128, 0.295988, -0.286903, -0.229542, 0.295988, -0.392619, 0.5, 0.199991, -0.5, -0.225431, 0.295988, -0.136942, -0.405247, 0.295988, -0.236883, 0.5, 0.199991, 0.5, -0.185885, 0.295988, -0.368344, -0.182557, 0.295988, -0.162588)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_h5pxt"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.2, -0.5, 0.5, 0, -0.5, -0.5, 0.2, 0.5, 0.5, 0, 0.5, 0.5, 0.2, -0.5, 0.5, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pa6s6"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.2, -0.5, 0.5, 0, -0.5, -0.5, 0.2, 0.5, 0.5, 0, 0.5, 0.5, 0.2, -0.5, 0.5, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jnrwx"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.19995, -0.5, 0.5, 0, -0.5, -0.5, 0.19995, 0.5, 0.5, 0, 0.5, -0.251077, 0.635544, -0.128034, -0.200568, 0.548042, -0.252741, 0.00332808, 0.431251, -0.373825, 0.5, 0.19995, -0.5, -0.137334, 0.484459, 0.336531, -0.137334, 0.587635, 0.259691, 0.5, 0.19995, 0.5, -0.107087, 0.602059, -0.190388, 0.272416, 0.75182, 0.071946, 0.136159, 0.614496, -0.165133, 0.350529, 0.626271, 0.00959277, 0.102388, 0.456346, 0.346417, 0.24628, 0.654236, 0.196652, 0.350529, 0.626271, 0.134299)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_030tn"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0.1, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.1, 0.5, 0.5, 0.1, -0.5, 0.5, 0, 0.5, 0.5, 0.1, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ktn3f"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.2, -0.5, 0.5, 0, -0.5, -0.5, 0.2, 0.5, 0.5, 0, 0.5, 0.5, 0.2, -0.5, 0.5, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4pqxs"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.2, -0.5, 0.5, 0, -0.5, -0.5, 0.2, 0.5, 0.5, 0, 0.5, 0.5, 0.2, -0.5, 0.5, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8mn1g"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.199956, -0.5, 0.5, 0, -0.5, -0.5, 0.199956, 0.5, 0.5, 0, 0.5, -0.499413, 0.257585, -0.257733, -0.467404, 0.295964, -0.258222, -0.0283868, 0.614546, -0.14027, -0.0707713, 0.431313, -0.363352, 0.00332808, 0.431313, -0.373825, 0.5, 0.199956, -0.5, -0.466523, 0.295964, -0.208203, -0.498532, 0.257585, -0.207713, 0.5, 0.199956, 0.5, 0.102388, 0.456338, 0.346417, 0.00880969, 0.614546, 0.149374, -0.0921104, 0.614546, 0.0169342, 0.136159, 0.614546, -0.165133, 0.186668, 0.614546, -0.0989624, 0.205266, 0.614546, 0.0459084, 0.173356, 0.614546, 0.124511)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5qys6"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.19998, -0.5, 0.5, 0, -0.5, -0.5, 0.19998, 0.5, 0.5, 0, 0.5, -0.375, 0.24999, -0.5, 0.5, 0.19998, -0.5, -0.375, 0.24999, 0.5, 0.5, 0.19998, 0.5, -0.136159, 0.3, -0.375, 0.375, 0.24999, -0.5, -0.136159, 0.3, 0.375, 0.375, 0.24999, 0.5, 0.136061, 0.3, -0.375, 0.136061, 0.3, 0.375)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0il4d"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.199962, -0.5, 0.5, 0, -0.5, -0.5, 0.199962, 0.5, 0.5, 0, 0.5, -0.153485, 0.77, -0.305795, -0.136453, 0.526925, -0.438821, -0.136453, 0.372488, -0.476312, 0.5, 0.199962, -0.5, -0.375, 0.249933, 0.5, -0.153485, 0.77, -0.271926, 0.5, 0.199962, 0.5, -0.119518, 0.77, -0.305795, 0.5, 0.249933, -0.375, 0.375, 0.249933, 0.5, -0.119518, 0.77, -0.271926, 0.5, 0.249933, 0.375)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5ng50"]
+points = PackedVector3Array(0.5, 0.19998, 1, 0.5, 0, 1, 0.5, 0.399961, -1, 0.375, 0.45, -1, 0.375, 0.249976, 1, -0.5, 0, 1, 0.5, 0, -1, -0.375, 0.45, -1, -0.375, 0.249976, 1, -0.5, 0.19998, 1, -0.5, 0, -1, -0.5, 0.399961, -1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3bint"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.399961, -0.5, 0.5, 0, -0.5, -0.5, 0.19998, 0.5, 0.5, 0, 0.5, -0.375, 0.45, -0.5, 0.5, 0.399961, -0.5, -0.375, 0.249976, 0.5, 0.5, 0.19998, 0.5, 0.375, 0.45, -0.5, 0.432557, 0.305477, 0.135474, 0.375, 0.249976, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kxhn8"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.19998, -0.5, 0.5, 0, -0.5, -0.5, 0.19998, 0.5, 0.5, 0, 0.5, -0.430697, 0.23194, -0.296496, -0.375, 0.25, -0.5, 0.5, 0.19998, -0.5, -0.375, 0.25, 0.5, 0.5, 0.19998, 0.5, 0.375, 0.25, -0.5, 0.434514, 0.23194, 0.389781, 0.375, 0.25, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qy2ab"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.19998, -0.5, 0.5, 0, -0.5, -0.5, 0.19998, 0.5, 0.5, 0, 0.5, -0.375, 0.25, -0.5, 0.5, 0.19998, -0.5, 0.5, 0.19998, 0.5, 0.375, 0.25, -0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nrh0i"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.399961, -0.5, 0.5, 0, -0.5, -0.5, 0.19998, 0.5, 0.5, 0, 0.5, -0.5, 0.399961, -0.0350431, -0.375, 0.45, -0.5, 0.5, 0.399961, -0.5, -0.375, 0.249976, 0.5, -0.375, 0.45, -0.0250587, 0.5, 0.19998, 0.5, 0.375, 0.45, -0.5, 0.5, 0.399961, -0.0350431, 0.375, 0.249976, 0.5, 0.375, 0.45, -0.0250587)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yjeul"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.199956, -0.5, 0.5, 0, -0.5, -0.5, 0.199956, 0.5, 0.5, 0, 0.5, -0.322729, 0.431313, -0.181872, -0.28563, 0.431313, -0.24814, -0.0780149, 0.614546, -0.0933829, 0.0709671, 0.614546, -0.171789, 0.5, 0.199956, -0.5, -0.341132, 0.378858, 0.178348, 0.5, 0.199956, 0.5, 0.114135, 0.456338, 0.347396, 0.0289742, 0.456338, 0.346319, 0.0475724, 0.614546, 0.179718, -0.0897612, 0.614546, 0.0823218, 0.139585, 0.614546, -0.123042, 0.202428, 0.614546, 0.0135082, 0.196554, 0.614546, 0.10141)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vjueb"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0.4, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.2, 0.5, 0.5, 0.4, -0.5, 0.5, 0, 0.5, 0.5, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yiq3u"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.2, -0.5, 0.5, 0, -0.5, -0.5, 0.2, 0.5, 0.5, 0, 0.5, 0.5, 0.2, -0.5, 0.5, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ysg74"]
+points = PackedVector3Array(-0.5, -1.0259e-29, -0.5, -0.5, -1.0259e-29, 0.5, -0.5, 0.2, -0.5, 0.5, -1.0259e-29, -0.5, -0.5, 0.2, 0.5, 0.5, -1.0259e-29, 0.5, 0.5, 0.2, -0.5, 0.5, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nmi3f"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.2, -0.5, 0.5, 0, -0.5, -0.5, 0.2, 0.5, 0.5, 0, 0.5, 0.5, 0.2, -0.5, 0.5, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cw8xv"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.2, -0.5, 0.5, 0, -0.5, -0.5, 0.2, 0.5, 0.5, 0, 0.5, 0.5, 0.2, -0.5, 0.5, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pfdrv"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.2, -0.5, 0.5, 0, -0.5, -0.5, 0.2, 0.5, 0.5, 0, 0.5, 0.5, 0.2, -0.5, 0.5, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vkenb"]
+points = PackedVector3Array(0.5, 0.2, 1, 0.5, 0, 1, 0.5, 0.4, -1, -0.5, 0.2, 1, -0.5, 0, 1, 0.5, 0, -1, -0.5, 0.4, -1, -0.5, 0, -1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tye6f"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.4, -0.5, 0.5, 0, -0.5, -0.5, 0.2, 0.5, 0.5, 0, 0.5, 0.5, 0.4, -0.5, 0.5, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_in8q0"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.2, -0.5, 0.5, 0, -0.5, -0.5, 0.2, 0.5, 0.5, 0, 0.5, 0.5, 0.2, -0.5, 0.5, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_swbog"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.2, -0.5, 0.5, 0, -0.5, -0.5, 0.2, 0.5, 0.5, 0, 0.5, 0.5, 0.2, -0.5, 0.5, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lav02"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.199969, -0.5, 0.5, 0, -0.5, -0.5, 0.199969, 0.5, 0.5, 0, 0.5, -0.5, 0.429914, 0.25, -0.450078, 0.635991, 0.25, -0.272709, 0.96, 0.227291, 0.227291, 0.96, -0.272709, 0.25, 0.635991, -0.450078, 0.25, 0.429914, -0.5, 0.5, 0.199969, -0.5, -0.391445, 0.635991, 0.391347, -0.25, 0.429914, 0.5, -0.25, 0.635991, 0.44998, 0.5, 0.199969, 0.5, -0.272709, 0.96, 0.272612, 0.272612, 0.96, -0.272709, 0.391347, 0.635991, -0.391445, 0.44998, 0.635991, -0.25, 0.5, 0.429914, -0.25, -0.227388, 0.96, 0.272612, 0.272612, 0.96, -0.227388)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_i056u"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.199969, -0.5, 0.5, 0, -0.5, -0.5, 0.199969, 0.5, 0.5, 0, 0.5, -0.5, 0.372498, -0.312549, -0.46251, 0.526985, -0.312549, -0.418657, 0.526985, -0.418657, -0.312549, 0.526985, -0.46251, -0.312549, 0.372498, -0.5, 0.5, 0.199969, -0.5, -0.391445, 0.635991, 0.391347, -0.450078, 0.635991, 0.25, -0.5, 0.429914, 0.25, -0.25, 0.429914, 0.5, -0.25, 0.635991, 0.44998, 0.5, 0.199969, 0.5, -0.272709, 0.96, 0.227291, -0.329483, 0.769992, -0.329483, 0.227291, 0.96, -0.272709, 0.25, 0.635991, -0.450078, 0.25, 0.429914, -0.5, 0.391347, 0.635991, -0.391445, 0.44998, 0.635991, -0.25, 0.5, 0.429914, -0.25, -0.272709, 0.96, 0.272612, 0.312451, 0.372498, 0.5, -0.227388, 0.96, 0.272612, 0.312451, 0.526985, 0.462412, 0.5, 0.372498, 0.312451, 0.462412, 0.526985, 0.312451, 0.418559, 0.526985, 0.418559, 0.272612, 0.96, -0.272709, 0.272612, 0.96, -0.227388, 0.329385, 0.769992, 0.329385)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2trjp"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.199969, -0.5, 0.5, 0, -0.5, -0.5, 0.199969, 0.5, 0.5, 0, 0.5, -0.0227095, 0.96, -0.0227095, 0.5, 0.199969, -0.5, -0.0227095, 0.96, 0.0226116, 0.5, 0.199969, 0.5, 0.0226116, 0.96, -0.0227095, 0.0226116, 0.96, 0.0226116)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ni16u"]
+points = PackedVector3Array(-1, 0, -1, -1, 0, 1, -1, 0.199969, -1, 1, 0, -1, -1, 0.199969, 1, 1, 0, 1, 0.646633, 0.96, 0.529757, 1, 0.199969, -1, 0.286609, 0.526985, 0.894479, 0.269577, 0.769992, 0.761355, 0.646633, 0.96, 0.57498, 1, 0.199969, 1, 0.691856, 0.96, 0.529757, 0.869225, 0.635991, 0.552271, 0.303641, 0.769992, 0.761355, 0.691856, 0.96, 0.57498)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gdygn"]
+points = PackedVector3Array(-1, 0, -0.5, -1, 0, 0.5, -1, 0.2, -0.5, 1, 0, -0.5, -1, 0.2, 0.5, 1, 0, 0.5, 1, 0.2, -0.5, 1, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qxdl1"]
+points = PackedVector3Array(-1, 0, -0.5, -1, 0, 0.5, -1, 0.2, -0.5, 1, 0, -0.5, -1, 0.2, 0.5, 1, 0, 0.5, 1, 0.2, -0.5, 1, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hra5o"]
+points = PackedVector3Array(-0.5, 0, -0.5, -1, 0, 0.437451, -0.5, 0.2, -0.5, 0.5, 0, -0.5, -1, 0, 0.5, -1, 0.2, 0.437451, 0.5, 0.2, -0.5, 1, 0, 0.437451, -1, 0.2, 0.5, 1, 0, 0.5, 1, 0.2, 0.437451, 1, 0.2, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5mhvb"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0.2, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.2, 0.5, 0.5, 0.2, -0.5, 0.5, 0, 0.5, 0.5, 0.2, 0.5)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Tile-bump" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.5)
+mesh = ExtResource("1_qcqsc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-bump"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-bump/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_qcqsc")
+
+[node name="Tile-corner-inner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -0.5)
+mesh = ExtResource("2_mw22e")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-corner-inner"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-corner-inner/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_mw22e")
+
+[node name="Tile-corner-large" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+mesh = ExtResource("3_cm0gy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-corner-large"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-corner-large/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_cm0gy")
+
+[node name="Tile-corner-outer" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
+mesh = ExtResource("4_rogne")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-corner-outer"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-corner-outer/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_rogne")
+
+[node name="Tile-corner-round" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.5)
+mesh = ExtResource("5_0f6yl")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-corner-round"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-corner-round/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_0f6yl")
+
+[node name="Tile-corner-square" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -0.5)
+mesh = ExtResource("6_h5pxt")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-corner-square"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-corner-square/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_h5pxt")
+
+[node name="Tile-crossing" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0.5)
+mesh = ExtResource("7_pa6s6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-crossing"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-crossing/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_pa6s6")
+
+[node name="Tile-crystal" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 1.5)
+mesh = ExtResource("8_jnrwx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-crystal"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-crystal/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_jnrwx")
+
+[node name="Tile-dirt" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 1.5)
+mesh = ExtResource("9_030tn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-dirt"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-dirt/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_030tn")
+
+[node name="Tile-end-round" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 1.5)
+mesh = ExtResource("10_ktn3f")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-end-round"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-end-round/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_ktn3f")
+
+[node name="Tile-end" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 1.5)
+mesh = ExtResource("11_4pqxs")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-end"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-end/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_4pqxs")
+
+[node name="Tile-hill" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 1.5)
+mesh = ExtResource("12_8mn1g")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-hill"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-hill/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_8mn1g")
+
+[node name="Tile-river-bridge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 0.5)
+mesh = ExtResource("13_5qys6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-river-bridge"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-river-bridge/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_5qys6")
+
+[node name="Tile-river-corner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -0.5)
+mesh = ExtResource("14_0il4d")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-river-corner"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-river-corner/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_0il4d")
+
+[node name="Tile-river-slope-large" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0)
+mesh = ExtResource("15_5ng50")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-river-slope-large"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-river-slope-large/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_5ng50")
+
+[node name="Tile-river-slope" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -0.5)
+mesh = ExtResource("16_3bint")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-river-slope"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-river-slope/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_3bint")
+
+[node name="Tile-river-straight" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 0.5)
+mesh = ExtResource("17_kxhn8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-river-straight"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-river-straight/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_kxhn8")
+
+[node name="Tile-river-transition" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 1.5)
+mesh = ExtResource("18_qy2ab")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-river-transition"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-river-transition/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_qy2ab")
+
+[node name="Tile-river-waterfall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -0.5)
+mesh = ExtResource("19_nrh0i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-river-waterfall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-river-waterfall/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_nrh0i")
+
+[node name="Tile-rock" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 1.5)
+mesh = ExtResource("20_yjeul")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-rock"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-rock/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_yjeul")
+
+[node name="Tile-slope" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 1.5)
+mesh = ExtResource("21_vjueb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-slope"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-slope/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_vjueb")
+
+[node name="Tile-spawn-end-round" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 0.5)
+mesh = ExtResource("22_yiq3u")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-spawn-end-round"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-spawn-end-round/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_yiq3u")
+
+[node name="Tile-spawn-end" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 1.5)
+mesh = ExtResource("23_ysg74")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-spawn-end"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-spawn-end/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_ysg74")
+
+[node name="Tile-spawn-round" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 2.5)
+mesh = ExtResource("24_nmi3f")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-spawn-round"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-spawn-round/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_nmi3f")
+
+[node name="Tile-spawn" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 2.5)
+mesh = ExtResource("25_cw8xv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-spawn"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-spawn/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_cw8xv")
+
+[node name="Tile-split" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 2.5)
+mesh = ExtResource("26_pfdrv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-split"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-split/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_pfdrv")
+
+[node name="Tile-straight-slope-large" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 0)
+mesh = ExtResource("27_vkenb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-straight-slope-large"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-straight-slope-large/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_vkenb")
+
+[node name="Tile-straight-slope" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 2.5)
+mesh = ExtResource("28_tye6f")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-straight-slope"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-straight-slope/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_tye6f")
+
+[node name="Tile-straight" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 2.5)
+mesh = ExtResource("29_in8q0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-straight"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-straight/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_in8q0")
+
+[node name="Tile-transition" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 2.5)
+mesh = ExtResource("30_swbog")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-transition"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-transition/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_swbog")
+
+[node name="Tile-tree-double" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 2.5)
+mesh = ExtResource("31_lav02")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-tree-double"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-tree-double/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_lav02")
+
+[node name="Tile-tree-quad" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 2.5)
+mesh = ExtResource("32_i056u")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-tree-quad"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-tree-quad/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_i056u")
+
+[node name="Tile-tree" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 2.5)
+mesh = ExtResource("33_2trjp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-tree"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-tree/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_2trjp")
+
+[node name="Tile-wide-corner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+mesh = ExtResource("34_ni16u")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-wide-corner"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-wide-corner/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_ni16u")
+
+[node name="Tile-wide-split" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1.5)
+mesh = ExtResource("35_gdygn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-wide-split"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-wide-split/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_gdygn")
+
+[node name="Tile-wide-straight" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 2.5)
+mesh = ExtResource("36_qxdl1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-wide-straight"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-wide-straight/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_qxdl1")
+
+[node name="Tile-wide-transition" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 1.5)
+mesh = ExtResource("37_hra5o")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile-wide-transition"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile-wide-transition/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_hra5o")
+
+[node name="Tile" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 2.5)
+mesh = ExtResource("38_5mhvb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tile"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tile/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_5mhvb")
