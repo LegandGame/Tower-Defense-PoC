@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://h2d341tn1cxc"
+path="res://.godot/imported/snow-tile-river-slope.obj-01a39ee1175f5476784a51d9bcb54fbd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/snow-tile-river-slope.obj-01a39ee1175f5476784a51d9bcb54fbd.mesh"]
+
+source_file="res://Assets/Models/snow-tile-river-slope.obj"
+dest_files=["res://.godot/imported/snow-tile-river-slope.obj-01a39ee1175f5476784a51d9bcb54fbd.mesh", "res://.godot/imported/snow-tile-river-slope.obj-01a39ee1175f5476784a51d9bcb54fbd.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
