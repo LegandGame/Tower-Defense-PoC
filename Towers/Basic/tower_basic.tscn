@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://svpsj7pgrb0w"]
+
+[ext_resource type="Script" uid="uid://bvbp3a81xp2u0" path="res://Towers/tower.gd" id="1_ppopp"]
+[ext_resource type="ArrayMesh" uid="uid://dtwfwabogj5ig" path="res://Assets/Models/weapon-ballista.obj" id="2_n4dfs"]
+[ext_resource type="ArrayMesh" uid="uid://rmfv0qc2jtfo" path="res://Assets/Models/tower-round-build-a.obj" id="3_1qkjm"]
+
+[node name="BasicTower" type="Node3D"]
+script = ExtResource("1_ppopp")
+
+[node name="TowerTop" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0.788547, 0)
+mesh = ExtResource("2_n4dfs")
+
+[node name="Muzzle" type="Marker3D" parent="TowerTop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42008, 0.320051)
+
+[node name="TowerBase" type="MeshInstance3D" parent="."]
+mesh = ExtResource("3_1qkjm")
+
+[node name="AttackTimer" type="Timer" parent="."]
