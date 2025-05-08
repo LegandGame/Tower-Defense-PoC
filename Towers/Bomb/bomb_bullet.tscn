@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://qo5vht3h5s7p"]
+
+[ext_resource type="ArrayMesh" uid="uid://du8d752r7okvf" path="res://Assets/Models/weapon-ammo-cannonball.obj" id="1_bitl3"]
+
+[node name="BombBullet" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_bitl3")
