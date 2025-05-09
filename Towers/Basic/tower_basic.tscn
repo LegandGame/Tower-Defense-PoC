@@ -1,11 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://svpsj7pgrb0w"]
+[gd_scene load_steps=6 format=3 uid="uid://svpsj7pgrb0w"]
 
 [ext_resource type="Script" uid="uid://bvbp3a81xp2u0" path="res://Towers/tower.gd" id="1_ppopp"]
+[ext_resource type="PackedScene" uid="uid://b3u5p7mwg3l6e" path="res://Towers/Basic/bullet_basic.tscn" id="2_1qkjm"]
 [ext_resource type="ArrayMesh" uid="uid://dtwfwabogj5ig" path="res://Assets/Models/weapon-ballista.obj" id="2_n4dfs"]
 [ext_resource type="ArrayMesh" uid="uid://rmfv0qc2jtfo" path="res://Assets/Models/tower-round-build-a.obj" id="3_1qkjm"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_ppopp"]
+
 [node name="BasicTower" type="Node3D"]
 script = ExtResource("1_ppopp")
+bulletScene = ExtResource("2_1qkjm")
 
 [node name="TowerTop" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0.788547, 0)
@@ -18,3 +22,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42008, 0.320051)
 mesh = ExtResource("3_1qkjm")
 
 [node name="AttackTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="RangeArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RangeArea"]
+shape = SubResource("SphereShape3D_ppopp")
