@@ -1,9 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3u5p7mwg3l6e"]
+[gd_scene load_steps=4 format=3 uid="uid://b3u5p7mwg3l6e"]
 
+[ext_resource type="Script" uid="uid://cmgrpjf48n12u" path="res://Towers/bullet.gd" id="1_n7jru"]
 [ext_resource type="ArrayMesh" uid="uid://jwopoafp47pm" path="res://Assets/Models/weapon-ammo-arrow.obj" id="1_ovymn"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_ovymn"]
+
 [node name="BasicBullet" type="Node3D"]
+script = ExtResource("1_n7jru")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 0, 0, 0)
 mesh = ExtResource("1_ovymn")
+
+[node name="AoEArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AoEArea"]
+shape = SubResource("SphereShape3D_ovymn")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -0.5)
+
+[node name="LifetimeTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="LifetimeTimer" to="." method="_on_lifetime_timer_timeout"]

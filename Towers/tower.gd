@@ -8,7 +8,7 @@ class_name Tower extends Node3D
 
 @export var bulletScene : PackedScene 
 
-var enemyList : Array = []	# list of viable enemies in range
+var enemyList : Array[Enemy] = []	# list of viable enemies in range
 
 # STATS
 var attackSpeed : float = 0.75	# seconds
@@ -46,8 +46,32 @@ func turn() -> void:
 	towerTop.rotation = Vector3(0, towerTop.rotation.y, 0)
 
 
-func find_target() -> Node3D:
-	return
+func find_target():
+	match targeting:
+		TARGET_TYPES.FIRST:
+			return enemyList[0]
+		TARGET_TYPES.LAST:
+			return enemyList[-1]
+		TARGET_TYPES.CLOSE:
+			var closestEnemy = null
+			var closestDist = INF
+			for e in enemyList:
+				if self.position.distance_squared_to(e.position) < closestDist:
+					closestDist = self.position.distance_squared_to(e.position)
+					closestEnemy = e
+			return closestEnemy
+		TARGET_TYPES.FAR:
+			var farthestEnemy = null
+			var farthestDist = 0.0
+			for e in enemyList:
+				if self.position.distance_squared_to(e.position) > farthestDist:
+					farthestDist = self.position.distance_squared_to(e.position)
+					farthestEnemy = e
+			return farthestEnemy
+		TARGET_TYPES.STRONGEST:
+			pass
+		TARGET_TYPES.WEAKEST:
+			pass
 
 func attack_timeout() -> void:
 	# reset timer

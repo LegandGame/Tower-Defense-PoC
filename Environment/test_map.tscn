@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bb3qpwu7hsyt0"]
+[gd_scene load_steps=8 format=3 uid="uid://bb3qpwu7hsyt0"]
 
 [ext_resource type="MeshLibrary" uid="uid://bq7xg80s2qngj" path="res://Environment/MeshLibraries/meshlib_forest.tres" id="1_0e4ny"]
 [ext_resource type="PackedScene" uid="uid://sdw2e05n6io" path="res://Towers/Bomb/tower_bomb.tscn" id="2_gqh7a"]
@@ -16,6 +16,13 @@ background_mode = 2
 sky = SubResource("Sky_rk4p8")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="Curve3D" id="Curve3D_gqh7a"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -4, 0, 0, 0, 0, 0, 0, 6, 0, -4, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, -2, 0, 0, 0, 0, 0, 0, 9, 0, -2, 0, 0, 0, 0, 0, 0, 9, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 9
 
 [node name="TestMap" type="Node3D"]
 
@@ -45,3 +52,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 1.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -2)
 light_energy = 4.0
 omni_range = 11.0
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1, 2.5)
+curve = SubResource("Curve3D_gqh7a")

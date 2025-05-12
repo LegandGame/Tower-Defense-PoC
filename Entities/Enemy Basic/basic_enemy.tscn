@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://hkj0dw30to72"]
+
+[ext_resource type="ArrayMesh" uid="uid://dw1kc6k87vs5y" path="res://Assets/Models/enemy-ufo-a.obj" id="1_3c6yu"]
+[ext_resource type="Script" uid="uid://8co4kg3tukqg" path="res://Entities/enemy.gd" id="1_u56m8"]
+[ext_resource type="Script" uid="uid://3um27pfj4p7r" path="res://Common/Health Component/health_compnent.gd" id="2_0n318"]
+[ext_resource type="Script" uid="uid://pwdnym325bi4" path="res://Common/Wallet/wallet.gd" id="3_a42o1"]
+
+[node name="BasicEnemy" type="PathFollow3D"]
+script = ExtResource("1_u56m8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_3c6yu")
+
+[node name="Health_Component" type="Node" parent="."]
+script = ExtResource("2_0n318")
+maxHealth = 5.0
+metadata/_custom_type_script = "uid://3um27pfj4p7r"
+
+[node name="Wallet" type="Node" parent="."]
+script = ExtResource("3_a42o1")
+value = 5
+metadata/_custom_type_script = "uid://pwdnym325bi4"

@@ -14,3 +14,10 @@ config/name="Tower Defense Proof of Concept"
 run/main_scene="uid://bb3qpwu7hsyt0"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[layer_names]
+
+3d_physics/layer_1="Tower Projectile"
+3d_physics/layer_2="Enemy"
+3d_physics/layer_3="Player HQ"
+3d_physics/layer_4="Tower"
