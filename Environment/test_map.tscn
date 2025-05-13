@@ -1,8 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://bb3qpwu7hsyt0"]
+[gd_scene load_steps=16 format=3 uid="uid://bb3qpwu7hsyt0"]
 
 [ext_resource type="MeshLibrary" uid="uid://bq7xg80s2qngj" path="res://Environment/MeshLibraries/meshlib_forest.tres" id="1_0e4ny"]
 [ext_resource type="PackedScene" uid="uid://sdw2e05n6io" path="res://Towers/Bomb/tower_bomb.tscn" id="2_gqh7a"]
 [ext_resource type="PackedScene" uid="uid://svpsj7pgrb0w" path="res://Towers/Basic/tower_basic.tscn" id="3_rk4p8"]
+[ext_resource type="PackedScene" uid="uid://cuuylwpl0err2" path="res://Entities/Spawner/spawner.tscn" id="4_rk4p8"]
+[ext_resource type="Script" uid="uid://da7w6n0um6m11" path="res://Common/wave_info.gd" id="5_wgb68"]
+[ext_resource type="Script" uid="uid://gbstanmh1jab" path="res://Common/spawn_info.gd" id="6_nyx0n"]
+[ext_resource type="PackedScene" uid="uid://hkj0dw30to72" path="res://Entities/Enemy Basic/basic_enemy.tscn" id="7_nyx0n"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gqh7a"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -23,6 +27,34 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 9
+
+[sub_resource type="Resource" id="Resource_fmpxi"]
+script = ExtResource("6_nyx0n")
+enemyScene = ExtResource("7_nyx0n")
+startTime = 0.0
+endTime = 10.0
+spawnFrequency = 0.5
+metadata/_custom_type_script = "uid://gbstanmh1jab"
+
+[sub_resource type="Resource" id="Resource_66typ"]
+script = ExtResource("5_wgb68")
+waveCompletionReward = 100
+spawnInfoList = Array[ExtResource("6_nyx0n")]([SubResource("Resource_fmpxi")])
+metadata/_custom_type_script = "uid://da7w6n0um6m11"
+
+[sub_resource type="Resource" id="Resource_nyx0n"]
+script = ExtResource("6_nyx0n")
+enemyScene = ExtResource("7_nyx0n")
+startTime = 0.0
+endTime = 5.0
+spawnFrequency = 0.1
+metadata/_custom_type_script = "uid://gbstanmh1jab"
+
+[sub_resource type="Resource" id="Resource_5ysls"]
+script = ExtResource("5_wgb68")
+waveCompletionReward = 0
+spawnInfoList = Array[ExtResource("6_nyx0n")]([SubResource("Resource_nyx0n")])
+metadata/_custom_type_script = "uid://da7w6n0um6m11"
 
 [node name="TestMap" type="Node3D"]
 
@@ -56,3 +88,8 @@ omni_range = 11.0
 [node name="Path3D" type="Path3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1, 2.5)
 curve = SubResource("Curve3D_gqh7a")
+
+[node name="Spawner" parent="." node_paths=PackedStringArray("levelPath") instance=ExtResource("4_rk4p8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 2.5)
+levelPath = NodePath("../Path3D")
+waveInfoList = Array[ExtResource("5_wgb68")]([SubResource("Resource_66typ"), SubResource("Resource_5ysls")])
