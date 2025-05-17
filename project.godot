@@ -15,6 +15,16 @@ run/main_scene="uid://bb3qpwu7hsyt0"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[file_customization]
+
+folder_colors={
+"res://Assets/": "gray",
+"res://Common/": "red",
+"res://Entities/": "pink",
+"res://Environment/": "orange",
+"res://Towers/": "purple"
+}
+
 [layer_names]
 
 3d_physics/layer_1="Tower Projectile"

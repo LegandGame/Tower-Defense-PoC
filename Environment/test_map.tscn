@@ -86,7 +86,7 @@ light_energy = 4.0
 omni_range = 11.0
 
 [node name="Path3D" type="Path3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1, 2.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0.5, 2.5)
 curve = SubResource("Curve3D_gqh7a")
 
 [node name="Spawner" parent="." node_paths=PackedStringArray("levelPath") instance=ExtResource("4_rk4p8")]

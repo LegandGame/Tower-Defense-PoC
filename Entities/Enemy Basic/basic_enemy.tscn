@@ -6,9 +6,11 @@
 [ext_resource type="Script" uid="uid://pwdnym325bi4" path="res://Common/Wallet/wallet.gd" id="3_a42o1"]
 
 [node name="BasicEnemy" type="PathFollow3D"]
+loop = false
 script = ExtResource("1_u56m8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 mesh = ExtResource("1_3c6yu")
 
 [node name="Health_Component" type="Node" parent="."]

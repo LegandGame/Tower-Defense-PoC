@@ -10,3 +10,4 @@ script = ExtResource("1_xfrh2")
 mesh = ExtResource("1_jywnh")
 
 [node name="WaveBufferTimer" type="Timer" parent="."]
+wait_time = 5.0

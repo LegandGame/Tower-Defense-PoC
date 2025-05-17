@@ -37,8 +37,8 @@ func end_wave() -> void:
 func spawn_enemy(enemy_scene : PackedScene) -> void:
 	var newEnemy = enemy_scene.instantiate()
 	# randomixe H & V Offset slightly
-	newEnemy.h_offset = randf() - 0.5
-	newEnemy.v_offset = randf() - 0.5
+	newEnemy.h_offset = randf()/1.5 - 0.5
+	newEnemy.v_offset = randf()/1.5 - 0.5
 	# add enemy to scene
 	levelPath.add_child(newEnemy)
 	numberOfEnemies += 1
